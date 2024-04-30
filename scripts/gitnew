@@ -1,0 +1,14 @@
+#!/bin/sh
+########################################################################################################################
+# Initialises git again in the current directory. This will remove any previous git histories.
+#
+# Usage: /bin/sh gitnew [remote url]
+########################################################################################################################
+
+command -v git > /dev/null 2>&1 || { echo 'ERROR: Program not found: git' 1>&2; exit 1; }
+rm -rf ./.git/
+git init
+git add -A
+git commit -am 'Initial commit'
+[ ! -z "$1" ] && git remote add origin "$1"
+exit 0      # don't exit error code

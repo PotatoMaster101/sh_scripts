@@ -1,0 +1,12 @@
+#!/bin/sh
+########################################################################################################################
+# Removes history files.
+#
+# Usage: /bin/sh clhist
+########################################################################################################################
+
+rm -rf $HOME/.bash_history $HOME/.viminfo $HOME/.wget-hsts $HOME/.lesshst $HOME/.nano_history $HOME/.node_repl_history
+rm -rf $HOME/.atftp_history $HOME/.mysql_history $HOME/.psql_history $HOME/.php_history $HOME/.python_history
+rm -rf $HOME/.scapy_history $HOME/.recently-used $HOME/.xsession-errors $HOME/.xsession-errors.old
+rm -rf $HOME/.kotlinc_history $HOME/.zsh_history $HOME/.zcompdump* $HOME/.cache $HOME/.bash_sessions
+clear
